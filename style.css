@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filter__container {
+    display: flex;
+    flex-direction: column;
+}
