@@ -10,9 +10,28 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1>Todo App</h1>
+    </header>
 
-    <main></main>
+    <main>
+        <div class="filter__container">
+            <label for="all">All</label>
+            <input type="radio" name="filter" id="radio-all" checked />
+            <label for="open">Open</label>
+            <input type="radio" name="filter" id="radio-open" />
+            <label for="done">Done</label>
+            <input type="radio" name="filter" id="radio-done" />
+        </div>
+
+        <button id="remove-todo">Remove done Todos</button>
+        <input type="text" id="input-todo" placeholder="What´s up?" />
+        <button id="add-todo">Add</button>
+
+        <div class="todos__container">
+            <ul class="todos-list"></ul>
+        </div>
+    </main>
 
     <footer></footer>
     <script src="script.js"></script>
