@@ -19,27 +19,28 @@
             <div class="filter__container">
                 <div class="filter__radio">
                     <label for="all">All</label>
-                    <input type="radio" name="filter" id="radio-all" checked />
+                    <input type="radio" name="filter" id="radio-all" value="all" checked />
                 </div>
                 <div class="filter__radio">
                     <label for="open">Open</label>
-                    <input type="radio" name="filter" id="radio-open" />
+                    <input type="radio" name="filter" id="radio-open" value="open" />
                 </div>
                 <div class="filter__radio">
                     <label for="done">Done</label>
-                    <input type="radio" name="filter" id="radio-done" />
+                    <input type="radio" name="filter" id="radio-done" value="done" />
                 </div>
             </div>
             <div class="remove__container">
-                <button id="remove-todo">Remove done Todos</button>
+                <button id="delete-todo-button">Remove done Todos</button>
             </div>
             <div class="input__container">
                 <input type="text" id="input-todo" placeholder="What´s up?" />
-                <button id="add-todo">Add</button>
+                <button id="add-todo-button">Add</button>
             </div>
 
             <div class="todos__container">
-                <ul class="todos-list"></ul>
+                <ul id="todos-list"></ul>
+                <!--  <li><input type="checkbox" /></li> -->
             </div>
         </div>
     </main>
