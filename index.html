@@ -6,41 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet" />
     <title>Todo-App</title>
 </head>
 
 <body>
     <header>
-        <h1>Todo App</h1>
+        <h1>todos</h1>
     </header>
 
     <main>
-        <div class="container">
-            <div class="filter__container">
-                <div class="filter__radio">
-                    <label for="all">All</label>
-                    <input type="radio" name="filter" id="radio-all" value="all" checked />
-                </div>
-                <div class="filter__radio">
-                    <label for="open">Open</label>
-                    <input type="radio" name="filter" id="radio-open" value="open" />
-                </div>
-                <div class="filter__radio">
-                    <label for="done">Done</label>
-                    <input type="radio" name="filter" id="radio-done" value="done" />
-                </div>
-            </div>
-            <div class="remove__container">
-                <button id="delete-todo-button">Remove done Todos</button>
-            </div>
+        <div class="todo-app__container">
             <div class="input__container">
-                <input type="text" id="input-todo" placeholder="What´s up?" />
+                <input type="text" id="input-todo" placeholder="What needs to be done?" />
                 <button id="add-todo-button">Add</button>
             </div>
 
             <div class="todos__container">
                 <ul id="todos-list"></ul>
-                <!--  <li><input type="checkbox" /></li> -->
+            </div>
+            <div class="options__container">
+                <div class="filter__container">
+                    <h2>Filter</h2>
+                    <div class="filter__radio">
+                        <label for="all">All</label>
+                        <input type="radio" name="filter" id="radio-all" value="all" checked />
+                    </div>
+                    <div class="filter__radio">
+                        <label for="open">Open</label>
+                        <input type="radio" name="filter" id="radio-open" value="open" />
+                    </div>
+                    <div class="filter__radio">
+                        <label for="done">Done</label>
+                        <input type="radio" name="filter" id="radio-done" value="done" />
+                    </div>
+                </div>
+
+                <div class="remove__container">
+                    <button id="delete-todo-button">Remove done Todos</button>
+                </div>
             </div>
         </div>
     </main>
