@@ -16,6 +16,9 @@ class TodoApp {
     initEventHandlers = () => {
         document
             .querySelector("#input-todo")
+            .addEventListener("keydown", this.handleAddTodoKeydownEvent);
+        document
+            .querySelector("#input-todo")
             .addEventListener("input", this.handleInputEvent);
         document
             .querySelector(".filter__container")
@@ -26,6 +29,12 @@ class TodoApp {
         document
             .querySelector("#delete-todo-button")
             .addEventListener("click", this.handleRemoveDoneEvent);
+    };
+
+    handleAddTodoKeydownEvent = (event) => {
+        if (event.keyCode === 13) {
+            this.handleAddTodo();
+        }
     };
 
     handleInputEvent = () => {
@@ -97,8 +106,8 @@ class TodoApp {
                     const newLi = this.renderLiElement(todo);
                     const checkboxElem = this.renderCheckboxElement(todo);
 
-                    newLi.appendChild(checkboxElem);
                     todoList.appendChild(newLi);
+                    newLi.appendChild(checkboxElem);
                 });
                 break;
             case "open":
